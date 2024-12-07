@@ -64,6 +64,11 @@ output * bg $background fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input "Logitech G502 HERO Gaming Mouse" {
+  accel_profile flat
+  pointer_accel 0
+}
+
 ### Key bindings
 #
 # Basics:
@@ -222,6 +227,6 @@ bar {
 }
 focus_follows_mouse no
 
-exec kanshi
+exec_always kanshi
 
 include /etc/sway/config.d/*
