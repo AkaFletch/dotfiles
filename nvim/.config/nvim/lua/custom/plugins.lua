@@ -13,6 +13,7 @@ local plugins = {
         "gopls",
         "goimports",
         "debugpy",
+        "rust-analyzer",
       }
     }
   },
@@ -26,7 +27,7 @@ local plugins = {
     "jose-elias-alvarez/null-ls.nvim",
     ft = "go",
     opts = function()
-      return require "custom.configs.null-ls-go"
+      return require "custom.configs.null-ls"
     end,
   }, {
     "mfussenegger/nvim-dap",
@@ -54,6 +55,41 @@ local plugins = {
   {
     "NVChad/nvim-autopairs",
     enabled = false
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    opts = function ()
+      return require "custom.configs.rust-tools"
+    end,
+    config = function (_, opts)
+      require("rust-tools").setup(opts)
+    end,
+    dependencies = "neovim/nvim-lspconfig"
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
+  {
+    "saecki/crates.nvim",
+    ft = {"rust", "toml"},
+    config = function(_, opts)
+      local crates = require("crates")
+      crates.setup(opts)
+      crates.show()
+    end
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function ()
+      local M = require "plugins.configs.cmp"
+      table.insert(M.sources, {name = "crates"})
+      return M
+    end
   },
   {
     "rcarriga/nvim-dap-ui",
