@@ -4,7 +4,7 @@
 	"modules-left": [
 		"sway/workspaces"
 	],
-	"modules-right": ["pulseaudio", "backlight", "network",  "cpu", "memory", "disk", "temperature", "battery", "clock", "tray"],
+	"modules-right": ["pulseaudio", "custom/wireguard", "backlight", "network",  "cpu", "memory", "disk", "temperature", "battery", "clock", "tray"],
 	"cpu": {
 		"format": "CPU: {usage}%"
 	},
@@ -23,5 +23,10 @@
 	},
 	"disk": {
 		"format": "{free}"
-	}
+	},
+  "custom/wireguard": {
+    "exec": "~/.config/waybar/scripts/wireguard.sh",
+    "on-click": "~/.config/waybar/scripts/wireguard.sh --toggle",
+    "interval": 2
+  }
 }
