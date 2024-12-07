@@ -1,0 +1,27 @@
+{
+	"position": "bottom",
+	"height": 20,
+	"modules-left": [
+		"sway/workspaces"
+	],
+	"modules-right": ["pulseaudio", "backlight", "network",  "cpu", "memory", "disk", "temperature", "battery", "clock", "tray"],
+	"cpu": {
+		"format": "CPU: {usage}%"
+	},
+	"memory": {
+		"format": "Mem: {}%"	
+	},
+	"battery": {
+		"format": "Battery: {}%"	
+	},
+	"pulseaudio": {
+		"format": "Speakers: {volume}%",
+		"format-bluetooth": "Head Phones: {volume}%"
+	},
+	"network": {
+		"format": "{essid} {bandwidthDownBytes}:{bandwidthUpBytes}"
+	},
+	"disk": {
+		"format": "{free}"
+	}
+}
