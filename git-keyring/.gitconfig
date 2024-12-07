@@ -1,0 +1,14 @@
+[user]
+	email = matt@threlfall.dev
+	name = Matt
+	signingkey = B02E61FDF5CEF06E362B26FDB7E7478FC456A57A
+[core]
+	editor = nvim
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
