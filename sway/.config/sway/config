@@ -12,6 +12,8 @@ set $mod Mod1
 default_border none
 gaps inner 10
 
+exec_always kanshi
+
 input * xkb_layout "gb"
 
 # Home row direction keys, like vim
@@ -226,7 +228,5 @@ bar {
 	swaybar_command waybar
 }
 focus_follows_mouse no
-
-exec_always kanshi
 
 include /etc/sway/config.d/*
