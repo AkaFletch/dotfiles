@@ -27,11 +27,11 @@ case "$1" in
     ;;
 *)
     if [ "$(connection_status)" = "1" ]; then
-        echo "VPN: On"
+        echo " VPN: On "
     elif [ "$(connection_status)" = "3" ]; then
-        echo "Config not found!"
+        echo " Config not found! "
     else
-        echo "VPN: Off"
+        echo " VPN: Off "
     fi
     ;;
 esac

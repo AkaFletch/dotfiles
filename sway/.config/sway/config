@@ -13,6 +13,7 @@ default_border none
 gaps inner 10
 
 exec_always kanshi
+exec mako --config ~/.config/mako/config
 
 input * xkb_layout "gb"
 
