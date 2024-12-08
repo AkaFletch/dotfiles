@@ -14,6 +14,7 @@ local plugins = {
         "goimports",
         "debugpy",
         "rust-analyzer",
+        "codelldb",
       }
     }
   },
