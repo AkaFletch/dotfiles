@@ -20,6 +20,7 @@ local plugins = {
       }
     }
   },
+  { "nvim-neotest/nvim-nio" },
   {
     "neovim/nvim-lspconfig",
     config=function ()
@@ -60,15 +61,9 @@ local plugins = {
     enabled = false
   },
   {
-    "simrat39/rust-tools.nvim",
-    ft = "rust",
-    opts = function ()
-      return require "custom.configs.rust-tools"
-    end,
-    config = function (_, opts)
-      require("rust-tools").setup(opts)
-    end,
-    dependencies = "neovim/nvim-lspconfig"
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false, -- This plugin is already lazy
   },
   {
     "rust-lang/rust.vim",

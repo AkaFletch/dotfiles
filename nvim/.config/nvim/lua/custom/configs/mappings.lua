@@ -1,5 +1,12 @@
 local M = {}
 
+vim.keymap.set("n", "]g", function ()
+  vim.diagnostic.goto_next()
+end)
+vim.keymap.set("n", "[g", function ()
+  vim.diagnostic.goto_prev()
+end)
+
 M.dap = {
   plugin = true,
   n = {

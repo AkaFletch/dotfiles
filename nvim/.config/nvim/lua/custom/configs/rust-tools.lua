@@ -5,7 +5,14 @@ local options = {
   server = {
     on_attach = on_attach,
     capabilities = capabilities,
-  }
+  },
+  dap = {
+    adapter = {
+      type = "executable",
+      command = "lldb-vscode",
+      name = "rt_lldb",
+    },
+  },
 }
 
 return options
