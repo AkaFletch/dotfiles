@@ -17,6 +17,7 @@ M.dap = {
     }
   }
 }
+
 M.dap_go = {
   plugin=true,
   n = {
@@ -34,6 +35,7 @@ M.dap_go = {
     }
   }
 }
+
 M.dapui = {
   n = {
     ["<leader>dui"] = {
@@ -41,6 +43,17 @@ M.dapui = {
         require("dapui").toggle()
       end,
       "Open debuging ui"
+    }
+  }
+}
+
+M.lsp = {
+  n = {
+    ["<leader>ww"] = {
+      function()
+        vim.diagnostic.open_float()
+      end,
+      "What's wrong with this line?"
     }
   }
 }

@@ -29,8 +29,32 @@ lspconfig.tsserver.setup{
   }
 }
 
+lspconfig.tailwindcss.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes= {"python"},
 })
+
+lspconfig.eslint.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
+lspconfig.golangcilsp = {
+  default_config = {
+    cmd = {'golangci-lint-langserver'},
+    root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
+    init_options = {
+        command = { "golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1" };
+    }
+  };
+}
+
+lspconfig.golangci_lint_ls.setup {
+	filetypes = {'go','gomod'}
+}

@@ -32,7 +32,8 @@ set $menu rofi -show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 set $background /home/matt/Photos/wallpaper.png
-output * bg $background fill
+output DP-1 bg /home/matt/Photos/Wallpapers/left.jpg fill
+output DP-3 bg /home/matt/Photos/Wallpapers/right.jpg fill
 #
 # Example configuration:
 #
