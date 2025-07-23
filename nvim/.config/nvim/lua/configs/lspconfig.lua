@@ -77,6 +77,10 @@ lspconfig.golangci_lint_ls.setup({
 	filetypes = { "go", "gomod" },
 })
 
+lspconfig.clangd.setup({
+	filetypes = { "c" },
+})
+
 require("sonarlint").setup({
 	server = {
 		cmd = {

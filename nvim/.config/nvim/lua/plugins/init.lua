@@ -4,7 +4,6 @@ return {
 		event = "BufWritePre", -- uncomment for format on save
 		opts = require("configs.conform"),
 	},
-
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
